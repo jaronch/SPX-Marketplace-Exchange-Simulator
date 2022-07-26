@@ -53,15 +53,20 @@ To run:
 ./spx_exchange products.txt ./tests/sell_orders1 ./tests/sell_orders2
 ```
 
-Trader 0 (./tests/sell_orders1):
+Trader 0 (./tests/sell_orders1) will send these commands to exchange:
+```
 SELL 0 GPU 5 100;
 SELL 1 GPU 10 99;
 SELL 2 GPU 10 100;
 SELL 3 GPU 115 100;
+```
 
-Trader 1 (./tests/sell_orders2):
+Trader 1 (./tests/sell_orders2) will send these commands to exchange:
+```
 BUY 0 GPU 100 1000;
+```
 
+The output printed to terminal is:
 ```
 [SPX] Starting
 [SPX] Trading 2 products: GPU Router
